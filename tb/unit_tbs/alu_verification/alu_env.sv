@@ -6,12 +6,15 @@ class alu_env;
 
     alu_transaction tr;
     alu_transaction mon_tr;
+    
+    alu_coverage cov;
 
     function new(virtual alu_if.TB vif);
         
         drv = new(vif);
         mon = new(vif);
         scb = new();
+        cov = new();
 
     endfunction
 
@@ -36,7 +39,11 @@ class alu_env;
 
             scb.check(mon_tr);
 
+            cov.sample(tr);
+
         end
+
+        cov.display_coverage();
 
         $display("\n=================================");
         $display("    TESTBENCH RUN COMPLETE    ");
