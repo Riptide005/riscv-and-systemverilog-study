@@ -32,18 +32,10 @@ class alu_coverage;
                                               }
         
         //Coverpoint 4: Cross Coverage - Operand_A zero bins and Opcode
-        cross_op_a_zero: cross cp_opcode, cp_operand_a {
-            
-            ignore_bins non_zero = !binsof(cp_operand_a.zero);
-                
-                                                       }
+        cross_op_a_zero: cross cp_opcode, cp_operand_a              
 
         //Coverpoint 5: Cross Coverage - Operand_B zero bins and Opcode
-        cross_op_b_zero: cross cp_opcode, cp_operand_b {
-
-            ignore_bins non_zero = !binsof(cp_operand_a.zero);
-
-                                                       }
+        cross_op_b_zero: cross cp_opcode, cp_operand_b 
 
     endgroup
 
