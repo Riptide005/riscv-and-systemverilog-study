@@ -6,8 +6,8 @@ A modular, 32-bit RISC-V (RV32I) processor core written in SystemVerilog, paired
 
 ## 📌 Project Overview
 
-This repository contains the complete RTL design and verification framework for a 32-bit RISC-V (RV32I ISA) processor core targeted for FPGA deployment. 
+This repository contains the complete RTL design and verification framework for a 32-bit RISC-V (RV32I ISA) processor core presently targeted for ASIC flow and potential FPGA deployment. 
 
-The verification environment follows a bottom-up methodology: each execution module (starting with the ALU) is verified using an object-oriented SystemVerilog testbench architecture before full pipeline integration.
+The verification environment follows a bottom-up methodology: each module is verified using an object-oriented SystemVerilog testbench architecture before full pipeline integration.
 
 ---
