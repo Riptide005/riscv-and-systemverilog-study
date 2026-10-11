@@ -23,19 +23,23 @@ localparam AND = 4'b1001;
 
 //Combinational block 
 always_comb begin
+
     case(alu_opcode)
-        ADD: result = a + b;
-        SUB: result = a - b;
-        SLL: result = a << b[4:0];
-        SLT: result = ($signed(a) < $signed(b)) ? 1 : 0;
-        SLTU: result = (a < b) ? 1 : 0;
-        XOR: result = a ^ b;
-        SRL: result = a >> b[4:0];
-        SRA: result = $signed(a) >>> $signed(b)[4:0];
-        OR: result = a | b;
-        AND: result = a & b;
+
+        ADD: result = operand_a + operand_b;
+        SUB: result = operand_a - operand_b; 
+        SLL: result = operand_a << operand_b[4:0];
+        SLT: result = ($signed(operand_a) < $signed(operand_b)) ? 1 : 0;
+        SLTU: result = (operand_a < operand_b) ? 1 : 0;
+        XOR: result = operand_a ^ operand_b;
+        SRL: result = operand_a >> operand_b[4:0];
+        SRA: result = $signed(operand_a) >>> $signed(operand_b)[4:0];
+        OR: result = operand_a | operand_b;
+        AND: result = operand_a & operand_b;
         default: result = 32'b=0;
+    
     endcase
+
 end
 
 assign zero_flag = (result == 32'b0);
