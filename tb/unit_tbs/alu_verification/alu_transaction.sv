@@ -14,6 +14,30 @@ class alu_transaction;
         alu_opcode inside {[0:9]};
     }
 
+    constraint c_operand_dist {
+       
+        operand_a dist {
+
+            32'h0000_0000 := 20,
+            32'h7FFF_FFFF := 20,
+            32'h8000_0000 := 20,
+            32'hFFFF_FFFF := 20,
+            [1:32'h7FFF_FFFE] := 20
+
+                        };
+
+        operand_b dist {
+
+            32'h0000_0000 := 20,
+            32'h7FFF_FFFF := 20,
+            32'h8000_0000 := 20, 
+            32'hFFFF_FFFF := 20,
+            [1:32'h7FFF_FFFE] := 20
+
+                        };
+                            
+                               }
+
 endclass
     
 
