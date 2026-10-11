@@ -18,7 +18,7 @@ module tb_alu_top();
 
         env = new(vif.TB);
         env.run(50);
-        $finish
+        $finish;
 
     end
 

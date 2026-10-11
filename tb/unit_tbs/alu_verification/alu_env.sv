@@ -24,7 +24,7 @@ class alu_env;
         for (int i = 0; i < num_tests; i++) begin
             
             tr = new();
-            if (!tr.randomize()) begin
+            if (tr.randomize() == 0) begin
                 $fatal(1, "[ENV] Transaction Randomization Failed!");
             end
 

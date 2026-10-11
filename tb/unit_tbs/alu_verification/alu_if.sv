@@ -6,7 +6,7 @@ interface alu_if();
     logic [31:0] result;
     logic zero_flag;
 
-    modport DUT {
+    modport DUT (
         
         input operand_a, 
         input operand_b,
@@ -14,9 +14,9 @@ interface alu_if();
         output result, 
         output zero_flag
         
-                };
+                );
      
-    modport TB {
+    modport TB (
 
         input result,
         input zero_flag,
@@ -24,6 +24,6 @@ interface alu_if();
         output operand_b,
         output alu_opcode
 
-               };
+               );
 
 endinterface

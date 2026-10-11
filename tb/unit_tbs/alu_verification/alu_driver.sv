@@ -9,7 +9,7 @@ class alu_driver;
     task drive(alu_transaction tr);
         vif.operand_a <= tr.operand_a;
         vif.operand_b <= tr.operand_b;
-        vif.op <= tr.alu_opcode;
+        vif.alu_opcode <= tr.alu_opcode;
     endtask
 
 endclass
