@@ -1,14 +1,24 @@
-# Simulation logs & waveforms
-*.log
+# ==========================================
+# Verilator Build Artifacts
+# ==========================================
+obj_dir/
 *.vcd
-*.wdb
-*.fsdb
-*.key
+*.fst
+*.dat
 
-# Tool directories (ModelSim, Vivado, Verilator, etc.)
-work/
+# ==========================================
+# Xilinx Vivado Simulator (XSIM) Artifacts
+# ==========================================
 xsim.dir/
 .Xil/
+*.log
 *.jou
 *.pb
-sim/
+*.wdb
+
+# ==========================================
+# Generic Simulation Binaries & Temp Files
+# ==========================================
+sim/alu_sim/alu_op
+*.o
+*.so
