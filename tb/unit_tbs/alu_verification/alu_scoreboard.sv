@@ -24,11 +24,11 @@ class alu_scoreboard;
         expected_zero = (expected_result == 0) ? 1'b1 : 1'b0;
         
         if ((tr.result === expected_result) && (tr.zero_flag === expected_zero)) begin
-            $display("[SCOREBOARD PASS] Opcode = %0d, A = 0x%h, B = 0x%h, Result = 0x%h", tr.alu_opcode, tr.operand_a, tr.operand_b, tr.result);
+            $display("[SCOREBOARD PASS] Opcode = %0d, A = 0x%h, B = 0x%h, Result = 0x%h, Zero = %b", tr.alu_opcode, tr.operand_a, tr.operand_b, tr.result, tr.zero_flag);
         end
 
         else begin
-            $error("[SCOREBOARD FAIL] Opcode = %0d, A = 0x%h, B = 0x%h, Result = 0x%h", tr.alu_opcode, tr.operand_a, tr.operand_b, tr.result);
+            $error("[SCOREBOARD FAIL] Opcode = %0d, A = 0x%h, B = 0x%h, Result = 0x%h, Zero = %b", tr.alu_opcode, tr.operand_a, tr.operand_b, tr.result, tr.zero_flag);
         end
 
     endtask
