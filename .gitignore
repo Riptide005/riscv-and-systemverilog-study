@@ -1,0 +1,13 @@
+# Simulation logs & waveforms
+*.log
+*.vcd
+*.wdb
+*.fsdb
+*.key
+
+# Tool directories (ModelSim, Vivado, Verilator, etc.)
+work/
+xsim.dir/
+.Xil/
+*.jou
+*.pb
