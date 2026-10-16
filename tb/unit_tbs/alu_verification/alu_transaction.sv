@@ -1,6 +1,6 @@
 class alu_transaction;
 
-    // Randomizable input stimulus
+    // Randomizable input stimuli
     rand logic [31:0] operand_a;
     rand logic [31:0] operand_b;
     rand logic [3:0]  alu_opcode;
