@@ -11,7 +11,7 @@ module regfile(
 
     logic [31:0] registers [31:0] ; // Makes 32 of 32-bit registers
 
-    always_ff(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk or negedge rst_n) begin
 
         if (!rst_n) begin
             for (int i = 0; i < 32; i++) begin
