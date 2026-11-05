@@ -21,21 +21,21 @@ class regfile_transaction;
         rd_addr dist {
 
             5'b0_0000 := 10,
-            [1:5'bF_FFFF] := 90
+            [1:5'b1_1111] := 90
 
                      };
 
         rs1_addr dist {
 
             5'b0_0000 := 20,
-            [1:5'bF_FFFF] := 80
+            [1:5'b1_1111] := 80
                 
                       };
 
         rs2_addr dist {
 
             5'b0_0000 := 15,
-            [1:5'bF_FFFF] := 85
+            [1:5'b1_1111] := 85
 
                       };
 
