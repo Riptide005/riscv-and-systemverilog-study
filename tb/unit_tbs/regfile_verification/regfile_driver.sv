@@ -7,9 +7,7 @@ class regfile_driver;
     endfunction
 
     task drive(regfile_transaction tr);
-        
-        vif.clk <= tr.clk;
-        vif.rst_n < tr.rst_n;
+
         vif.we <= tr.we;
         vif.rd_addr <= tr.rd_addr;
         vif.rd_data <= tr.rd_data;
