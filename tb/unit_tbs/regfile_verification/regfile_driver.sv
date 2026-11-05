@@ -7,7 +7,9 @@ class regfile_driver;
     endfunction
 
     task drive(regfile_transaction tr);
-
+        
+        @posedge( vif.clk);
+        
         vif.we <= tr.we;
         vif.rd_addr <= tr.rd_addr;
         vif.rd_data <= tr.rd_data;
