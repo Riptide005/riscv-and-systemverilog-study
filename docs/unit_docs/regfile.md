@@ -1,0 +1,2 @@
+The regfile module contains the working of the registers for the processor from register x0 that is hardwired to zero to x31 the last register. This module currently lacks an internal bypass (immediately sending data to rs1/rs2 when rs1/rs2 address is the same as rd_addr).
+Functional coverage has been reported to be 77.27% which can be further improved with directed testing however plans for directed testing are not in the present scope of development for this project since the processor design and moderate verification is the current targetted milestone.
