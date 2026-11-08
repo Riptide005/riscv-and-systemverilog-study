@@ -54,14 +54,14 @@ class regfile_coverage;
     function void sample(regfile_transaction t);
         
         this.tr = t;
-        alu_cg.sample();
+        regfile_cg.sample();
 
     endfunction
 
     function void display_coverage();
 
         $display("\n===================================");
-        $display("    FUNCTIONAL COVERAGE: %0.2f%%    ", regfile_cg.get_inst_coverage()));
+        $display("    FUNCTIONAL COVERAGE: %0.2f%%    ", regfile_cg.get_inst_coverage());
         $display("===================================\n");
 
     endfunction
