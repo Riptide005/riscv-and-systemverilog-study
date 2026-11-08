@@ -10,6 +10,16 @@ class regfile_scoreboard;
     endfunction 
 
     task check(regfile_transaction tr);
+        
+        if (vif.rst_n == 0) begin
+            
+            foreach(shadow_reg[i]) begin
+                shadow_reg[i] = 32'h0;
+            end
+            $display("[SCOREBOARD] Mid-simulation reset asserted. Wiping shadow registers...");
+            return;
+
+        end
 
         exp_rs1_data = (tr.rs1_addr == 5'h0 ) ? 0 : shadow_reg[tr.rs1_addr];
         exp_rs2_data = (tr.rs2_addr == 5'h0 ) ? 0 : shadow_reg[tr.rs2_addr];
