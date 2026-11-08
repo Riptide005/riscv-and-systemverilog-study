@@ -7,11 +7,14 @@ class regfile_env;
     regfile_transaction tr;
     regfile_transaction mon_tr;
 
+    regfile_coverage cov;
+
     function new(virtual regfile_if.TB vif);
 
         drv = new(vif);
         mon = new(vif);
         scb = new(vif);
+        cov = new();
         
     endfunction
 
@@ -34,7 +37,11 @@ class regfile_env;
             
             scb.check(mon_tr);
 
+            cov.sample(tr);
+
         end
+        
+        cov.display_coverage();
 
         $display("\n================================");
         $display("     TESTBENCH RUN COMPLETE      ");
