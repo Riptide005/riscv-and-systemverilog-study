@@ -19,6 +19,6 @@ xsim.dir/
 # ==========================================
 # Generic Simulation Binaries & Temp Files
 # ==========================================
-sim/alu_sim/alu_op
+sim/
 *.o
 *.so
