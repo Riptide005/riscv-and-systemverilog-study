@@ -11,7 +11,7 @@ class regfile_env;
 
         drv = new(vif);
         mon = new(vif);
-        scb = new();
+        scb = new(vif);
         
     endfunction
 

@@ -3,7 +3,10 @@ class regfile_scoreboard;
     logic [31:0] exp_rs1_data, exp_rs2_data;
     logic [31:0] shadow_reg [31:0];
     
-    function new();
+    virtual regfile_if.TB vif;
+
+    function new(virtual regfile_if.TB vif);
+        this.vif = vif;
         foreach(shadow_reg[i]) begin
             shadow_reg[i] = 32'h0;
         end
